@@ -38,6 +38,13 @@ export default function Header() {
     document.body.style.overflow = open ? 'hidden' : '';
   }, [open]);
 
+  // La pestaña "Más" de la barra inferior (móvil) abre este menú
+  useEffect(() => {
+    const show = () => setOpen(true);
+    window.addEventListener('kab:menu', show);
+    return () => window.removeEventListener('kab:menu', show);
+  }, []);
+
   return (
     <>
       <motion.header

@@ -12,3 +12,4 @@ export function useMediaQuery(query: string) {
 }
 
 export const DESKTOP = '(min-width: 1024px)';
+export const MOBILE = '(max-width: 759px)';
