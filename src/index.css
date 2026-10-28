@@ -1169,3 +1169,25 @@ select.field { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://ww
 
 /* ---------- Sin fondos punteados ---------- */
 .hero__dots, .msol__tile::after, .line-card__art::after { display: none; }
+
+/* Botones de pasos (Proyectos especiales): más grandes y fáciles de tocar */
+.ops__dots { gap: 8px; margin-top: 14px; }
+.ops__dots button { height: 46px; font-size: 13.5px; border-color: rgba(255, 244, 230, .18); color: #d8ccbe; }
+.ops__dots button span { opacity: .75; }
+.ops__hint { font-size: 13.5px; padding: 8px 16px; border-radius: 999px; background: rgba(255, 244, 230, .08); color: #e7dccf; }
+@media (min-width: 1024px) {
+  .ops__dots { gap: 10px; margin-top: 22px; }
+  .ops__dots button { height: 56px; font-size: 15.5px; }
+  .ops__hint { font-size: 14.5px; padding: 10px 20px; }
+}
+@media (max-width: 759px) {
+  .ops__dots button { flex: 1 1 auto; padding: 0 12px; white-space: nowrap; font-size: 13.5px; }
+  .ops__dots button span { display: none; }
+}
+@media (max-width: 759px) {
+  .ops__stage { padding-top: 64px; padding-bottom: calc(92px + env(safe-area-inset-bottom)); gap: 14px; }
+  .ops__media { height: min(44svh, 460px); }
+  .ops__step { min-height: 0; }
+  .ops__hint { bottom: calc(90px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 759px) { .ops__hint { display: none; } }
