@@ -32,7 +32,7 @@ export default function Final() {
             {f.cta} <Icon name="arrow" size={18} stroke={2.2} />
           </MagneticButton>
         </div>
-        <motion.img src="/img/container.webp" alt="" className="final__container" style={{ y: cy, rotate: cr }} aria-hidden="true" />
+        <motion.img src="/img/container-kab.webp" alt="" className="final__container" style={{ y: cy, rotate: cr }} aria-hidden="true" />
       </section>
 
       <footer className="footer" id="footer">

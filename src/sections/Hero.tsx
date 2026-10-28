@@ -120,7 +120,7 @@ export default function Hero({ onTrack }: { onTrack: (need: string) => void }) {
               data-cursor
             >
               <div className="float">
-                <img src="/img/container.webp" alt={h.containerAlt} draggable={false} width={1100} height={693} />
+                <img src="/img/container-kab.webp" alt={h.containerAlt} draggable={false} width={1100} height={693} />
               </div>
             </motion.div>
           </motion.div>

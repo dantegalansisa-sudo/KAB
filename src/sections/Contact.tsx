@@ -120,7 +120,7 @@ export default function Contact({ prefill }: { prefill: QuotePrefill | null }) {
             {CONTACT.email && <a href={`mailto:${CONTACT.email}`}><Icon name="mail" size={18} /> {CONTACT.email}</a>}
             <span className="contact__loc"><Icon name="pin" size={18} /> {CONTACT.location}</span>
           </div>
-          <img src="/img/container.webp" alt="" className="contact__container" aria-hidden="true" />
+          <img src="/img/container-kab.webp" alt="" className="contact__container" aria-hidden="true" />
         </motion.aside>
 
         <motion.div

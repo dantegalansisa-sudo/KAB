@@ -60,7 +60,7 @@ export default function Story() {
                 visible: { clipPath: 'inset(0% 0% 0% 0%)', transition: { duration: 1.2, ease: EASINGS.premium } },
               }}
             >
-              <motion.img src="/img/puerto.webp" alt={st.imgAlt} style={{ y: p1.y, scale: 1.25 }} loading="lazy" />
+              <motion.img src="/img/kab-quienes-somos.webp" alt={st.imgAlt} style={{ y: p1.y, scale: 1.25 }} loading="lazy" />
             </motion.div>
             <motion.div
               className="story__badge"

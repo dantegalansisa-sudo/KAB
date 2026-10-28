@@ -81,7 +81,7 @@ export default function HeroMobile({ onSearch, onPick }: { onSearch: (need: stri
             transition={{ delay: 0.6, duration: 1.3, ease: EASINGS.bounce }}
           >
             <div className="float">
-              <img src="/img/container.webp" alt={h.containerAlt} draggable={false} />
+              <img src="/img/container-kab.webp" alt={h.containerAlt} draggable={false} />
             </div>
           </motion.div>
           <span className="mhero__shadow" aria-hidden="true" />

@@ -31,7 +31,7 @@ export default function Process() {
         <div className="timeline__rail" aria-hidden="true">
           <motion.div className="timeline__fill" style={{ scaleY: prog }} />
           <motion.div className="timeline__runner" style={{ top }}>
-            <img src="/img/container.webp" alt="" />
+            <img src="/img/container-kab.webp" alt="" />
           </motion.div>
         </div>
         {pr.steps.map((s, i) => (

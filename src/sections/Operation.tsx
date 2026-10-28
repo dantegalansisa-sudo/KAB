@@ -9,8 +9,8 @@ import { HAS_WHATSAPP, wa } from '../data';
 import { useLang } from '../i18n';
 import { EASINGS, fadeUp } from '../utils/easings';
 
-// PENDIENTE: reemplazar por fotos de proyectos reales de K.A.B. (verticales, 9:16)
-const IMAGES = ['/img/maritimo.webp', '/img/almacen.webp', '/img/terrestre.webp'];
+// Fotos de K.A.B.: visión (planificación), coordinación (puerto) y realidad (aire y mar)
+const IMAGES = ['/img/kab-proyecto-1.webp', '/img/kab-proyecto-2.webp', '/img/kab-proyecto-3.webp'];
 const N = IMAGES.length;
 
 /**
