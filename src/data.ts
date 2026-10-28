@@ -29,7 +29,7 @@ export type IconName =
   | 'fridge' | 'snow' | 'sofa' | 'brick' | 'plug' | 'whatsapp'
   | 'mail' | 'phone' | 'instagram' | 'check' | 'doc' | 'calendar'
   | 'calc' | 'plus' | 'users' | 'spark' | 'route' | 'menu' | 'close'
-  | 'beam' | 'window' | 'home' | 'speaker' | 'gear' | 'sun' | 'bank' | 'pencil' | 'chat' | 'layers';
+  | 'beam' | 'window' | 'home' | 'speaker' | 'gear' | 'sun' | 'bank' | 'pencil' | 'chat' | 'layers' | 'door' | 'stairs' | 'railing';
 
 /** Líneas de soluciones: íconos y estilo de cada tarjeta; los textos viven en i18n.tsx (mismo orden) */
 export const LINES: { id: string; icon: IconName; tone: string }[] = [

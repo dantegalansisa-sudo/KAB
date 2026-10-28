@@ -503,5 +503,5 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
 export const useLang = () => useContext(LangContext);
 
 /** Íconos por posición, compartidos entre idiomas */
-export const IMPORT_ICONS: IconName[] = ['window', 'shield', 'layers', 'window', 'snow', 'home'];
+export const IMPORT_ICONS: IconName[] = ['window', 'shield', 'door', 'railing', 'stairs', 'home'];
 export const STEP_ICONS: IconName[] = ['chat', 'search', 'doc', 'boxes', 'check'];

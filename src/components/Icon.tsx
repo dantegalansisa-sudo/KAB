@@ -41,7 +41,10 @@ const P: Record<IconName, JSX.Element> = {
   bank: <><path d="M3 9l9-5 9 5" /><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18" /></>,
   pencil: <><path d="M4 20l1-4.5L15.5 5a2.1 2.1 0 013 3L8 18.5z" /><path d="M13.5 7l3 3" /></>,
   chat: <><path d="M4 5h16v11H9l-5 4z" /><path d="M8 9.5h8M8 12.5h5" /></>,
-  layers: <><path d="M12 3l9 5-9 5-9-5z" /><path d="M3 13l9 5 9-5" /></>,
+  door: <><rect x="5" y="2.5" width="14" height="19" rx="1" /><path d="M8 5.5h8v7H8z" /><path d="M15.5 14.5v1.5" /></>,
+  stairs: <><path d="M3 20h5v-4.5h4.5V11H17V6.5h4" /><path d="M3 20h18" /></>,
+  railing: <><path d="M3 7h18" /><rect x="4" y="9" width="7.5" height="10" rx="1" /><rect x="12.5" y="9" width="7.5" height="10" rx="1" /><path d="M6 11.5l2 2" /></>,
+  layers:<><path d="M12 3l9 5-9 5-9-5z" /><path d="M3 13l9 5 9-5" /></>,
 };
 
 export default function Icon({ name, size = 22, stroke = 1.7, className }: {

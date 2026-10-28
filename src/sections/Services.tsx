@@ -5,20 +5,23 @@ import Icon from '../components/Icon';
 import { LINES, ctaLink } from '../data';
 import { useLang } from '../i18n';
 import { EASINGS, fadeUp } from '../utils/easings';
+import { MOBILE, useMediaQuery } from '../hooks/useMediaQuery';
 
 // Color del panel por línea (paleta tierra, tonos profundos para texto claro)
 const PANEL = ['#5b4636', '#8a5236', '#59604a', '#8c6d4c', '#6e4a4e', '#5f574e', '#8f6b2c', '#4f625d'];
 const N = LINES.length;
 
 /**
- * Líneas de soluciones (PC y tablet): índice editorial fijo durante el scroll.
- * A la izquierda la lista de líneas; a la derecha un panel con la línea activa,
- * con el ícono que se dibuja y el color que cambia en cada paso.
+ * Líneas de soluciones: índice editorial fijo durante el scroll.
+ * PC/tablet: lista a la izquierda y panel a la derecha. Móvil: nombre activo con
+ * segmentos de progreso arriba y el panel debajo. El ícono se dibuja y el color
+ * del panel cambia en cada paso.
  */
 export default function Services() {
   const { t } = useLang();
   const sv = t.services;
   const short = t.app.short;
+  const mobile = useMediaQuery(MOBILE);
   const track = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
 
@@ -52,6 +55,34 @@ export default function Services() {
                 {sv.title}
               </RevealText>
 
+              {mobile ? (
+                <div className="sol__mnav">
+                  <div className="sol__mrow">
+                    <span className="sol__mcount"><strong>0{active + 1}</strong> / 0{N}</span>
+                    <motion.span
+                      key={active}
+                      className="sol__mname"
+                      initial={{ y: 18, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.4, ease: EASINGS.smooth }}
+                    >
+                      {short[active]}
+                    </motion.span>
+                  </div>
+                  <div className="sol__segs">
+                    {LINES.map((l, i) => (
+                      <button
+                        key={l.id}
+                        type="button"
+                        aria-label={short[i]}
+                        aria-current={i === active}
+                        className={i < active ? 'is-past' : i === active ? 'is-on' : ''}
+                        onClick={() => goTo(i)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : (
               <ol className="sol__list">
                 {LINES.map((l, i) => (
                   <motion.li
@@ -74,6 +105,7 @@ export default function Services() {
                   </motion.li>
                 ))}
               </ol>
+              )}
 
               <div className="sol__progress"><motion.span style={{ scaleX: bar }} /></div>
             </div>

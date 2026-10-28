@@ -1191,3 +1191,70 @@ select.field { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://ww
   .ops__hint { bottom: calc(90px + env(safe-area-inset-bottom)); }
 }
 @media (max-width: 759px) { .ops__hint { display: none; } }
+
+/* ---------- Puertas y ventanas: ventana doble que se abre con el scroll ---------- */
+.imports__content { z-index: 3; transform-origin: 50% 40%; }
+.imports__sheen {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(112deg, transparent 36%, rgba(255, 248, 239, .13) 48%, transparent 60%);
+  transform: translateX(-110%); animation: sheen 7.5s ease-in-out 1.5s infinite;
+}
+@keyframes sheen { 0% { transform: translateX(-110%); } 38%, 100% { transform: translateX(110%); } }
+.imports__panes { position: absolute; inset: 0; z-index: 4; display: flex; pointer-events: none; perspective: 1600px; }
+.imports__pane-wrap { width: 50%; height: 100%; }
+.imports__pane-wrap--l { transform-origin: 0 50%; }
+.imports__pane-wrap--r { transform-origin: 100% 50%; }
+.pane {
+  position: relative; height: 100%; padding: 14px; display: grid; grid-template: 1fr 1fr / 1fr 1fr; gap: 10px;
+  background: linear-gradient(160deg, #3d332b, #2b2520); box-shadow: inset 0 0 0 1px rgba(255, 244, 230, .08);
+}
+.pane--l { box-shadow: inset 0 0 0 1px rgba(255, 244, 230, .08), inset -3px 0 0 #1f1a16; }
+.pane--r { box-shadow: inset 0 0 0 1px rgba(255, 244, 230, .08), inset 3px 0 0 #1f1a16; }
+.pane__glass {
+  border-radius: 6px; border: 1px solid rgba(255, 244, 230, .14);
+  background: linear-gradient(135deg, rgba(211, 162, 127, .24), rgba(255, 244, 230, .04) 45%, rgba(255, 244, 230, .12));
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, .25);
+}
+.pane__handle { position: absolute; top: 50%; width: 6px; height: 58px; margin-top: -29px; border-radius: 4px; background: var(--accent-2); box-shadow: 0 2px 6px rgba(0, 0, 0, .4); }
+.pane--l .pane__handle { right: 12px; }
+.pane--r .pane__handle { left: 12px; }
+.imports__grid { perspective: 1100px; }
+.import-chip { transform-origin: 0 50%; }
+
+/* ---------- Líneas de soluciones en móvil (misma animación de scroll) ---------- */
+.sol__mnav { margin-top: 14px; }
+.sol__mrow { display: flex; align-items: baseline; gap: 12px; }
+.sol__mcount { flex: none; font-size: 13px; color: var(--muted); font-weight: 600; }
+.sol__mcount strong { font-family: var(--font-display); font-size: 20px; color: var(--accent); }
+.sol__mname { font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: -0.03em; line-height: 1.1; }
+.sol__segs { display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; margin-top: 12px; }
+.sol__segs button { height: 18px; position: relative; }
+.sol__segs button::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 4px; border-radius: 4px;
+  background: var(--line); transition: background .4s;
+}
+.sol__segs button.is-past::before { background: rgba(168, 106, 69, .45); }
+.sol__segs button.is-on::before { background: var(--accent); }
+
+@media (max-width: 759px) {
+  .sol__track { height: 380svh; }
+  .sol__sticky { align-items: stretch; }
+  .sol__inner {
+    display: flex; flex-direction: column; gap: 14px; height: 100%;
+    padding: 72px 16px calc(92px + env(safe-area-inset-bottom));
+  }
+  .sol__title { font-size: 26px; margin-top: 8px; max-width: none; }
+  .sol__progress { display: none; }
+  .sol__panel { flex: 1; min-height: 0; height: auto; padding: 22px; border-radius: 28px; }
+  .sol__ring { width: 340px; height: 340px; right: -120px; top: -120px; }
+  .sol__bignum { font-size: 72px; left: 22px; top: 16px; }
+  .sol__art { right: 16px; top: 16px; scale: .5; transform-origin: top right; }
+  .sol__copy h3 { font-size: 22px; }
+  .sol__copy p { font-size: 14px; margin-top: 8px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .sol__copy ul { margin-top: 12px; }
+  .sol__copy li { font-size: 11.5px; padding: 6px 11px; }
+  .sol__cta { height: 44px; margin-top: 14px; padding: 0 18px; font-size: 14px; }
+  .sol__counter { display: none; }
+  .imports__content { transform-origin: 50% 30%; }
+  .pane { padding: 10px; gap: 7px; }
+}
