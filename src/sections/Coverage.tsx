@@ -14,14 +14,14 @@ const REGIONS = [
     cy: -40,
   },
   {
+    id: 'caribe', // Cartagena y Kingston
+    points: [{ x: 279, y: 210 }, { x: 276, y: 192 }],
+    cy: 10,
+  },
+  {
     id: 'usa',
     points: [{ x: 252, y: 166 }, { x: 283, y: 126 }],
     cy: 60,
-  },
-  {
-    id: 'eu',
-    points: [{ x: 428, y: 124 }, { x: 463, y: 96 }],
-    cy: 30,
   },
 ];
 
@@ -78,7 +78,7 @@ export default function Coverage() {
           )}
           <circle cx={DR.x} cy={DR.y} r="22" className="map__pulse" />
           <circle cx={DR.x} cy={DR.y} r="9" className="map__dr" />
-          <g className="map__tag" transform={`translate(${DR.x - 92} ${DR.y + 22})`}>
+          <g className="map__tag" transform={`translate(${DR.x - 92} ${DR.y + 26})`}>
             <rect width="184" height="30" rx="15" />
             <text x="92" y="20" textAnchor="middle">{cv.dr}</text>
           </g>

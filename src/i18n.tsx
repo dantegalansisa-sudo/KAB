@@ -21,7 +21,7 @@ const es = {
     links: ['Soluciones', 'Proyectos', 'Cómo trabajamos', 'Cotizar', 'Nosotros', 'Contacto'],
   },
   hero: {
-    pill: 'Puerto Rico · Comercio global',
+    pill: 'San Juan, Puerto Rico · Comercio global',
     title: 'Conectamos mercados, impulsamos negocios',
     accent: [2, 3], breaks: [1, 2], deskBreaks: [1],
     sub: [
@@ -33,14 +33,14 @@ const es = {
     trackBtn: 'Solicitar cotización',
     containerAlt: 'Contenedor de K.A.B. Comercio Global flotando',
     swipe: 'Desliza',
-    chip: ['Proveedores', 'nacionales e internacionales'],
+    chip: ['China · EE. UU.', '→ San Juan, PR'],
     chip2: ['Atención', 'personalizada'],
   },
   story: {
     routesLabel: 'Líneas de productos',
     routes: [
-      'Estructuras de acero', 'Ventanas acústicas', 'Puertas de seguridad', 'Casas modulares', 'Muebles y decoración',
-      'Audio profesional', 'Pantallas LED', 'Maquinaria industrial', 'Sistemas solares', 'Generadores', 'Cocinas y gabinetes', 'Climatización',
+      'Puertas y ventanas', 'Barandas de cristal', 'Escaleras flotantes', 'Sistemas solares con baterías de litio', 'Gabinetes de cocina',
+      'Refrigeración comercial', 'Máquinas de hielo', 'Iluminación LED', 'Aire acondicionado', 'Paneles de yeso', 'Mármol', 'Casas modulares',
     ],
     big: 'Conectamos mercados, impulsamos negocios ·',
     eyebrow: 'Quiénes somos',
@@ -55,7 +55,7 @@ const es = {
       { v: '8', label: 'Líneas de soluciones' },
       { v: '1', label: 'Socio para todo su proyecto' },
       { v: '360°', label: 'De la idea a la entrega' },
-      { v: 'PR', label: 'Empresa puertorriqueña' },
+      { v: 'PR', label: 'Desde San Juan, Puerto Rico' },
     ],
   },
   services: {
@@ -64,13 +64,13 @@ const es = {
     prev: 'Anterior', next: 'Siguiente',
     cta: 'Cotizar esta línea',
     items: [
-      { title: 'Construcción, remodelación y acabados', kicker: 'Obra · Renovación', desc: 'Materiales y productos para construir y renovar, desde los componentes principales hasta los detalles finales.', tags: ['Acero y paneles', 'Techos', 'Pisos y fachadas', 'Eléctrico y plomería', 'Cocinas y baños'] },
-      { title: 'Puertas y ventanas', kicker: 'Opciones certificadas', desc: 'Ventanas diseñadas para reducir el ruido y puertas de seguridad en distintos niveles de protección, para proyectos residenciales, comerciales e industriales.', tags: ['Ventanas acústicas', 'Puertas de seguridad', 'Aluminio y cristal'] },
+      { title: 'Construcción, remodelación y acabados', kicker: 'Obra · Renovación', desc: 'Materiales y productos para construir y renovar, desde los componentes principales hasta los detalles finales.', tags: ['Acero y paneles', 'Yeso y mármol', 'Pisos y fachadas', 'Eléctrico y plomería', 'Cocinas y baños'] },
+      { title: 'Puertas y ventanas', kicker: 'Opciones certificadas', desc: 'Ventanas diseñadas para reducir el ruido y puertas de seguridad en distintos niveles de protección, para proyectos residenciales, comerciales e industriales.', tags: ['Ventanas acústicas', 'Puertas de seguridad', 'Barandas de cristal', 'Escaleras flotantes'] },
       { title: 'Casas modulares y residenciales', kicker: 'Viviendas · Prefabricadas', desc: 'Soluciones para casas modulares, viviendas prefabricadas y proyectos residenciales completos: estructura, materiales, mobiliario y acabados.', tags: ['Modulares', 'Prefabricadas', 'Proyecto completo'] },
       { title: 'Diseño, muebles y espacios de lujo', kicker: 'Interiores · Exteriores', desc: 'Mobiliario, decoración e iluminación para casas, apartamentos, villas, hoteles, oficinas y negocios.', tags: ['Muebles', 'Cocinas y closets', 'Iluminación', 'Pérgolas y exteriores'] },
-      { title: 'Negocios, discotecas y entretenimiento', kicker: 'Comercial · Eventos', desc: 'Equipamos restaurantes, bares, discotecas, hoteles y tiendas: audio, iluminación, pantallas LED, barras y mobiliario comercial.', tags: ['Audio profesional', 'Pantallas LED', 'Barras', 'Cocina y refrigeración'] },
+      { title: 'Negocios, discotecas y entretenimiento', kicker: 'Comercial · Eventos', desc: 'Equipamos restaurantes, bares, discotecas, hoteles y tiendas: audio, iluminación, pantallas LED, barras y mobiliario comercial.', tags: ['Audio profesional', 'Pantallas LED', 'Refrigeración comercial', 'Máquinas de hielo'] },
       { title: 'Maquinaria, equipos y tecnología', kicker: 'Industria', desc: 'Herramientas, equipos industriales, maquinaria pesada, sistemas automatizados y tecnología especializada para distintas industrias.', tags: ['Construcción', 'Manufactura', 'Impresión', 'Almacenaje'] },
-      { title: 'Energía e instalaciones', kicker: 'Solar · Climatización', desc: 'Sistemas solares, baterías, generadores, equipos eléctricos y aire acondicionado de acuerdo con cada proyecto.', tags: ['Solar', 'Baterías', 'Generadores', 'Aire acondicionado'] },
+      { title: 'Energía e instalaciones', kicker: 'Solar · Climatización', desc: 'Sistemas solares, baterías, generadores, equipos eléctricos y aire acondicionado de acuerdo con cada proyecto.', tags: ['Solar', 'Baterías de litio', 'Generadores', 'Aire acondicionado'] },
       { title: 'Proyectos especiales', kicker: 'Diseño · Coordinación', desc: 'Coordinamos cada etapa y le conectamos con diseñadores y especialistas nacionales e internacionales para hogares, villas, hoteles y espacios comerciales.', tags: ['Diseño a medida', 'Especialistas', 'Coordinación'] },
     ],
   },
@@ -102,7 +102,7 @@ const es = {
   imports: {
     eyebrow: 'Puertas y ventanas',
     title: 'Seguridad, aislamiento y diseño para cada propiedad', accent: [5, 6],
-    items: ['Ventanas acústicas', 'Puertas de seguridad', 'Sistemas de aluminio', 'Cristalería', 'Aislamiento', 'Residencial y comercial'],
+    items: ['Ventanas acústicas', 'Puertas de seguridad', 'Puertas de aluminio', 'Barandas de cristal', 'Escaleras flotantes', 'Residencial y comercial'],
     note: 'Opciones certificadas para proyectos residenciales, comerciales e industriales. Las certificaciones, características y niveles de desempeño se verifican para cada producto según el modelo y los requisitos del proyecto.',
   },
   quote: {
@@ -129,13 +129,13 @@ const es = {
   coverage: {
     eyebrow: 'Alcance global',
     title: 'Conectamos mercados con su proyecto', accent: [1],
-    sub: 'Trabajamos con proveedores nacionales e internacionales para conseguir lo que su proyecto necesita, incluso cuando se trata de necesidades especiales.',
-    mapAlt: 'Mapa de rutas de proveedores hacia Puerto Rico',
-    dr: 'Puerto Rico',
+    sub: 'Trabajamos directamente con fábricas en China y con proveedores en Estados Unidos, y coordinamos el envío hasta San Juan a través de los principales puertos del Caribe.',
+    mapAlt: 'Mapa de rutas de proveedores hacia San Juan, Puerto Rico',
+    dr: 'San Juan, Puerto Rico',
     regions: [
-      { label: 'Asia', desc: 'Manufactura, maquinaria y tecnología' },
-      { label: 'Norteamérica', desc: 'Materiales, equipos y marcas reconocidas' },
-      { label: 'Europa', desc: 'Diseño, mobiliario y acabados' },
+      { label: 'China', desc: 'Fábricas en Shenzhen, Foshan y Guangzhou' },
+      { label: 'Rutas del Caribe', desc: 'Tránsito por Cartagena, Kingston y Caucedo' },
+      { label: 'Estados Unidos', desc: 'Proveedores nacionales y marcas reconocidas' },
     ],
   },
   about: {
@@ -155,7 +155,7 @@ const es = {
     title: 'preguntas antes de empezar su proyecto',
     items: [
       { title: '¿Qué tipo de productos pueden conseguir?', desc: 'Trabajamos con una amplia variedad: materiales de construcción, puertas y ventanas, mobiliario, equipos para negocios y entretenimiento, maquinaria y soluciones de energía. Si se trata de una necesidad especial o un proyecto personalizado, cuéntenos y buscamos la alternativa.' },
-      { title: '¿Trabajan con proveedores internacionales?', desc: 'Sí. Servimos como intermediario entre nuestros clientes y proveedores nacionales e internacionales, y gestionamos la búsqueda y adquisición de los productos.' },
+      { title: '¿Trabajan con proveedores internacionales?', desc: 'Sí. Trabajamos directamente con fábricas en China y con proveedores en Estados Unidos, y gestionamos la búsqueda, la adquisición y el envío de los productos hasta Puerto Rico.' },
       { title: '¿Ofrecen financiamiento?', desc: 'Estamos disponibles para explorar alternativas de financiamiento, condiciones de pago y acuerdos comerciales. Cada propuesta se evalúa individualmente y está sujeta a disponibilidad, evaluación y aprobación de las partes o entidades correspondientes.' },
       { title: '¿Las puertas y ventanas están certificadas?', desc: 'Gestionamos opciones certificadas. Las certificaciones, características y niveles de desempeño se verifican para cada producto según el modelo y los requisitos del proyecto.' },
       { title: '¿Pueden ayudar con trámites y permisos?', desc: 'Podemos asistirle en la coordinación de los trámites y permisos aplicables, sujetos a los requisitos y aprobaciones de las autoridades correspondientes.' },
@@ -200,7 +200,7 @@ const es = {
     cta: 'Solicitar cotización',
     tag: 'Conectamos mercados, impulsamos negocios.',
     contact: 'Contacto',
-    location: 'Puerto Rico',
+    location: 'San Juan, Puerto Rico',
     services: 'Soluciones',
     serviceLinks: ['Construcción', 'Puertas y ventanas', 'Casas modulares', 'Diseño y muebles', 'Negocios y entretenimiento', 'Maquinaria', 'Energía'],
     company: 'Empresa',
@@ -230,7 +230,7 @@ const en: Dict = {
     links: ['Solutions', 'Projects', 'How we work', 'Get a quote', 'About us', 'Contact'],
   },
   hero: {
-    pill: 'Puerto Rico · Global trade',
+    pill: 'San Juan, Puerto Rico · Global trade',
     title: 'Connecting markets, driving business',
     accent: [2, 3], breaks: [1, 2], deskBreaks: [1],
     sub: [
@@ -242,14 +242,14 @@ const en: Dict = {
     trackBtn: 'Request a quote',
     containerAlt: 'Floating K.A.B. Comercio Global container',
     swipe: 'Swipe',
-    chip: ['National &', 'international suppliers'],
+    chip: ['China · USA', '→ San Juan, PR'],
     chip2: ['Personalized', 'service'],
   },
   story: {
     routesLabel: 'Product lines',
     routes: [
-      'Steel structures', 'Acoustic windows', 'Security doors', 'Modular homes', 'Furniture & decor',
-      'Professional audio', 'LED screens', 'Industrial machinery', 'Solar systems', 'Generators', 'Kitchens & cabinets', 'Air conditioning',
+      'Doors & windows', 'Glass railings', 'Floating staircases', 'Lithium battery solar systems', 'Kitchen cabinets',
+      'Commercial refrigeration', 'Ice machines', 'LED lighting', 'Air conditioning', 'Gypsum board', 'Marble', 'Modular homes',
     ],
     big: 'Connecting markets, driving business ·',
     eyebrow: 'Who we are',
@@ -264,7 +264,7 @@ const en: Dict = {
       { v: '8', label: 'Solution lines' },
       { v: '1', label: 'Partner for your whole project' },
       { v: '360°', label: 'From idea to delivery' },
-      { v: 'PR', label: 'Puerto Rican company' },
+      { v: 'PR', label: 'Based in San Juan, Puerto Rico' },
     ],
   },
   services: {
@@ -273,13 +273,13 @@ const en: Dict = {
     prev: 'Previous', next: 'Next',
     cta: 'Quote this line',
     items: [
-      { title: 'Construction, remodeling & finishes', kicker: 'Build · Renovate', desc: 'Materials and products to build and renovate, from the main components to the final details.', tags: ['Steel & panels', 'Roofing', 'Floors & facades', 'Electrical & plumbing', 'Kitchens & baths'] },
-      { title: 'Doors and windows', kicker: 'Certified options', desc: 'Windows designed to reduce noise and security doors in different protection levels, for residential, commercial and industrial projects.', tags: ['Acoustic windows', 'Security doors', 'Aluminum & glass'] },
+      { title: 'Construction, remodeling & finishes', kicker: 'Build · Renovate', desc: 'Materials and products to build and renovate, from the main components to the final details.', tags: ['Steel & panels', 'Gypsum & marble', 'Floors & facades', 'Electrical & plumbing', 'Kitchens & baths'] },
+      { title: 'Doors and windows', kicker: 'Certified options', desc: 'Windows designed to reduce noise and security doors in different protection levels, for residential, commercial and industrial projects.', tags: ['Acoustic windows', 'Security doors', 'Glass railings', 'Floating staircases'] },
       { title: 'Modular & residential homes', kicker: 'Homes · Prefab', desc: 'Solutions for modular homes, prefabricated housing and complete residential projects: structure, materials, furniture and finishes.', tags: ['Modular', 'Prefabricated', 'Full project'] },
       { title: 'Design, furniture & luxury spaces', kicker: 'Interiors · Exteriors', desc: 'Furniture, decor and lighting for houses, apartments, villas, hotels, offices and businesses.', tags: ['Furniture', 'Kitchens & closets', 'Lighting', 'Pergolas & outdoor'] },
-      { title: 'Business, nightclubs & entertainment', kicker: 'Commercial · Events', desc: 'We equip restaurants, bars, nightclubs, hotels and stores: audio, lighting, LED screens, bars and commercial furniture.', tags: ['Professional audio', 'LED screens', 'Bars', 'Kitchen & refrigeration'] },
+      { title: 'Business, nightclubs & entertainment', kicker: 'Commercial · Events', desc: 'We equip restaurants, bars, nightclubs, hotels and stores: audio, lighting, LED screens, bars and commercial furniture.', tags: ['Professional audio', 'LED screens', 'Commercial refrigeration', 'Ice machines'] },
       { title: 'Machinery, equipment & technology', kicker: 'Industry', desc: 'Tools, industrial equipment, heavy machinery, automated systems and specialized technology for different industries.', tags: ['Construction', 'Manufacturing', 'Printing', 'Storage'] },
-      { title: 'Energy & facilities', kicker: 'Solar · HVAC', desc: 'Solar systems, batteries, generators, electrical equipment and air conditioning tailored to each project.', tags: ['Solar', 'Batteries', 'Generators', 'Air conditioning'] },
+      { title: 'Energy & facilities', kicker: 'Solar · HVAC', desc: 'Solar systems, batteries, generators, electrical equipment and air conditioning tailored to each project.', tags: ['Solar', 'Lithium batteries', 'Generators', 'Air conditioning'] },
       { title: 'Special projects', kicker: 'Design · Coordination', desc: 'We coordinate every stage and connect you with national and international designers and specialists for homes, villas, hotels and commercial spaces.', tags: ['Custom design', 'Specialists', 'Coordination'] },
     ],
   },
@@ -311,7 +311,7 @@ const en: Dict = {
   imports: {
     eyebrow: 'Doors and windows',
     title: 'Security, insulation and design for every property', accent: [5, 6],
-    items: ['Acoustic windows', 'Security doors', 'Aluminum systems', 'Glazing', 'Insulation', 'Residential & commercial'],
+    items: ['Acoustic windows', 'Security doors', 'Aluminum doors', 'Glass railings', 'Floating staircases', 'Residential & commercial'],
     note: 'Certified options for residential, commercial and industrial projects. Certifications, features and performance levels are verified for each product according to the model and the project requirements.',
   },
   quote: {
@@ -338,13 +338,13 @@ const en: Dict = {
   coverage: {
     eyebrow: 'Global reach',
     title: 'Connecting markets with your project', accent: [1],
-    sub: 'We work with national and international suppliers to source what your project needs, even when it comes to special requirements.',
-    mapAlt: 'Map of supplier routes to Puerto Rico',
-    dr: 'Puerto Rico',
+    sub: 'We work directly with factories in China and suppliers in the United States, and coordinate shipping to San Juan through the main Caribbean ports.',
+    mapAlt: 'Map of supplier routes to San Juan, Puerto Rico',
+    dr: 'San Juan, Puerto Rico',
     regions: [
-      { label: 'Asia', desc: 'Manufacturing, machinery and technology' },
-      { label: 'North America', desc: 'Materials, equipment and recognized brands' },
-      { label: 'Europe', desc: 'Design, furniture and finishes' },
+      { label: 'China', desc: 'Factories in Shenzhen, Foshan and Guangzhou' },
+      { label: 'Caribbean routes', desc: 'Transit via Cartagena, Kingston and Caucedo' },
+      { label: 'United States', desc: 'National suppliers and recognized brands' },
     ],
   },
   about: {
@@ -364,7 +364,7 @@ const en: Dict = {
     title: 'questions before starting your project',
     items: [
       { title: 'What kind of products can you source?', desc: 'We work with a wide variety: construction materials, doors and windows, furniture, business and entertainment equipment, machinery and energy solutions. If it is a special need or a custom project, tell us and we will look for the right alternative.' },
-      { title: 'Do you work with international suppliers?', desc: 'Yes. We act as the link between our clients and national and international suppliers, and manage the search and procurement of products.' },
+      { title: 'Do you work with international suppliers?', desc: 'Yes. We work directly with factories in China and suppliers in the United States, and manage the search, procurement and shipping of products to Puerto Rico.' },
       { title: 'Do you offer financing?', desc: 'We are open to exploring financing alternatives, payment terms and business agreements. Each proposal is evaluated individually and is subject to availability, evaluation and approval by the corresponding parties or entities.' },
       { title: 'Are the doors and windows certified?', desc: 'We manage certified options. Certifications, features and performance levels are verified for each product according to the model and the project requirements.' },
       { title: 'Can you help with procedures and permits?', desc: 'We can assist you in coordinating the applicable procedures and permits, subject to the requirements and approvals of the corresponding authorities.' },
@@ -409,7 +409,7 @@ const en: Dict = {
     cta: 'Request a quote',
     tag: 'Connecting markets, driving business.',
     contact: 'Contact',
-    location: 'Puerto Rico',
+    location: 'San Juan, Puerto Rico',
     services: 'Solutions',
     serviceLinks: ['Construction', 'Doors & windows', 'Modular homes', 'Design & furniture', 'Business & entertainment', 'Machinery', 'Energy'],
     company: 'Company',

@@ -9,7 +9,7 @@ export const CONTACT = {
   whatsapp: '', // solo dígitos con código de país, ej. 17875551234
   email: '',
   instagram: '',
-  location: 'Puerto Rico',
+  location: 'San Juan, Puerto Rico',
 };
 
 export const HAS_WHATSAPP = CONTACT.whatsapp.length > 0;

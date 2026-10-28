@@ -23,7 +23,7 @@ const replacements = [
     '<h1>K.A.B. Comercio Global Inc. — Connecting markets, driving business</h1>'],
   ['<p>Su socio estratégico para construir, equipar y transformar sus proyectos: construcción, remodelación y acabados; puertas y ventanas; casas modulares; diseño y mobiliario; equipos para negocios, discotecas y entretenimiento; maquinaria y tecnología; energía e instalaciones.</p>',
     '<p>Your strategic partner to build, equip and transform your projects: construction, remodeling and finishes; doors and windows; modular homes; design and furniture; business, nightclub and entertainment equipment; machinery and technology; energy and facilities.</p>'],
-  ['<p>Proveedores nacionales e internacionales · Puerto Rico.</p>', '<p>National and international suppliers · Puerto Rico.</p>'],
+  ['<p>Proveedores nacionales e internacionales · San Juan, Puerto Rico.</p>', '<p>National and international suppliers · San Juan, Puerto Rico.</p>'],
 ];
 
 let out = html;
