@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import RevealText from '../components/RevealText';
 import MagneticButton from '../components/MagneticButton';
 import Icon from '../components/Icon';
-import { CONTACT, HAS_WHATSAPP, ctaLink, wa } from '../data';
+import { CONTACT, HAS_WHATSAPP, TEAM, ctaLink, fmtPhone, telHref, wa } from '../data';
 import type { QuotePrefill } from './Tools';
 import { useLang } from '../i18n';
 import { EASINGS, fadeUp } from '../utils/easings';
@@ -117,6 +117,9 @@ export default function Contact({ prefill }: { prefill: QuotePrefill | null }) {
             <strong>K.A.B. Comercio Global Inc.</strong>
             {CONTACT.name && <span>{CONTACT.name}</span>}
             {HAS_WHATSAPP && <a {...ctaLink(t.wa.default)}><Icon name="whatsapp" size={18} /> {CONTACT.phone}</a>}
+            {TEAM.map((m) => (
+              <a key={m.name} href={telHref(m.phone)}><Icon name="phone" size={18} /> {fmtPhone(m.phone)} · {m.name}</a>
+            ))}
             {CONTACT.email && <a href={`mailto:${CONTACT.email}`}><Icon name="mail" size={18} /> {CONTACT.email}</a>}
             <span className="contact__loc"><Icon name="pin" size={18} /> {CONTACT.location}</span>
           </div>

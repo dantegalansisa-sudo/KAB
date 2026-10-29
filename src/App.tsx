@@ -14,6 +14,7 @@ import Imports from './sections/Imports';
 import Tools, { type QuotePrefill } from './sections/Tools';
 import Coverage from './sections/Coverage';
 import About from './sections/About';
+import Team from './sections/Team';
 import Contact from './sections/Contact';
 import Final from './sections/Final';
 import { MOBILE, useMediaQuery } from './hooks/useMediaQuery';
@@ -53,6 +54,7 @@ export default function App() {
         <ScrollSheet enabled={mobile}><Tools need={need.text} nonce={need.nonce} onContinue={onContinue} /></ScrollSheet>
         <ScrollSheet enabled={mobile}><Coverage /></ScrollSheet>
         <ScrollSheet enabled={mobile}><About /></ScrollSheet>
+        <ScrollSheet enabled={mobile}><Team /></ScrollSheet>
         <ScrollSheet enabled={mobile}><Contact prefill={prefill} /></ScrollSheet>
         <Final />
       </main>

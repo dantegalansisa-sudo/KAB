@@ -25,7 +25,7 @@ const es = {
     of: 'de',
     stats: [
       { v: '8', l: 'líneas de soluciones' },
-      { v: 'CN · US', l: 'proveedores directos' },
+      { v: 'Global', l: 'proveedores en todo el mundo' },
       { v: 'PR', l: 'entrega en Puerto Rico' },
     ],
     short: ['Construcción', 'Puertas y ventanas', 'Casas modulares', 'Diseño y muebles', 'Negocios y eventos', 'Maquinaria', 'Energía', 'Proyectos especiales'],
@@ -50,7 +50,7 @@ const es = {
     trackBtn: 'Solicitar cotización',
     containerAlt: 'Contenedor de K.A.B. Comercio Global flotando',
     swipe: 'Desliza',
-    chip: ['China · EE. UU.', '→ San Juan, PR'],
+    chip: ['Alcance mundial', '→ San Juan, PR'],
     chip2: ['Atención', 'personalizada'],
   },
   story: {
@@ -146,13 +146,13 @@ const es = {
   coverage: {
     eyebrow: 'Alcance global',
     title: 'Conectamos mercados con su proyecto', accent: [1],
-    sub: 'Trabajamos directamente con fábricas en China y con proveedores en Estados Unidos, y coordinamos el envío hasta San Juan a través de los principales puertos del Caribe.',
+    sub: 'Trabajamos con fabricantes y proveedores de distintos mercados del mundo y coordinamos cada envío hasta San Juan, Puerto Rico.',
     mapAlt: 'Mapa de rutas de proveedores hacia San Juan, Puerto Rico',
     dr: 'San Juan, Puerto Rico',
     regions: [
-      { label: 'China', desc: 'Fábricas en Shenzhen, Foshan y Guangzhou' },
-      { label: 'Rutas del Caribe', desc: 'Tránsito por Cartagena, Kingston y Caucedo' },
-      { label: 'Estados Unidos', desc: 'Proveedores nacionales y marcas reconocidas' },
+      { label: 'Alcance mundial', desc: 'Fabricantes y proveedores en distintos mercados' },
+      { label: 'Logística coordinada', desc: 'Compra, envío y seguimiento en un solo lugar' },
+      { label: 'Entrega en Puerto Rico', desc: 'Todo llega a su proyecto en San Juan' },
     ],
   },
   about: {
@@ -167,12 +167,20 @@ const es = {
     values: 'Lo que nos define',
     valueList: ['Calidad', 'Servicio personalizado', 'Relaciones a largo plazo', 'Atención confiable', 'Productos competitivos', 'Nuevas oportunidades', 'Visión global', 'Soluciones a medida'],
   },
+  team: {
+    eyebrow: 'Equipo de trabajo',
+    title: 'Las personas detrás de cada proyecto', accent: [1],
+    sub: 'Un equipo cercano que le acompaña desde la primera conversación hasta la entrega.',
+    roles: ['CEO', 'Representante'],
+    call: 'Llamar',
+    photoSoon: 'Foto próximamente',
+  },
   tips: {
     eyebrow: 'Preguntas frecuentes',
     title: 'preguntas antes de empezar su proyecto',
     items: [
       { title: '¿Qué tipo de productos pueden conseguir?', desc: 'Trabajamos con una amplia variedad: materiales de construcción, puertas y ventanas, mobiliario, equipos para negocios y entretenimiento, maquinaria y soluciones de energía. Si se trata de una necesidad especial o un proyecto personalizado, cuéntenos y buscamos la alternativa.' },
-      { title: '¿Trabajan con proveedores internacionales?', desc: 'Sí. Trabajamos directamente con fábricas en China y con proveedores en Estados Unidos, y gestionamos la búsqueda, la adquisición y el envío de los productos hasta Puerto Rico.' },
+      { title: '¿Trabajan con proveedores internacionales?', desc: 'Sí. Trabajamos con fabricantes y proveedores de distintos mercados del mundo, y gestionamos la búsqueda, la adquisición y el envío de los productos hasta Puerto Rico.' },
       { title: '¿Ofrecen financiamiento?', desc: 'Estamos disponibles para explorar alternativas de financiamiento, condiciones de pago y acuerdos comerciales. Cada propuesta se evalúa individualmente y está sujeta a disponibilidad, evaluación y aprobación de las partes o entidades correspondientes.' },
       { title: '¿Las puertas y ventanas están certificadas?', desc: 'Gestionamos opciones certificadas. Las certificaciones, características y niveles de desempeño se verifican para cada producto según el modelo y los requisitos del proyecto.' },
       { title: '¿Pueden ayudar con trámites y permisos?', desc: 'Podemos asistirle en la coordinación de los trámites y permisos aplicables, sujetos a los requisitos y aprobaciones de las autoridades correspondientes.' },
@@ -221,7 +229,7 @@ const es = {
     services: 'Soluciones',
     serviceLinks: ['Construcción', 'Puertas y ventanas', 'Casas modulares', 'Diseño y muebles', 'Negocios y entretenimiento', 'Maquinaria', 'Energía'],
     company: 'Empresa',
-    companyLinks: ['Nosotros', 'Cómo trabajamos', 'Proyectos especiales', 'Cotizar'],
+    companyLinks: ['Nosotros', 'Equipo', 'Cómo trabajamos', 'Proyectos especiales', 'Cotizar'],
     top: 'Volver arriba ↑',
     fab: 'Escríbanos por WhatsApp',
   },
@@ -251,7 +259,7 @@ const en: Dict = {
     of: 'of',
     stats: [
       { v: '8', l: 'solution lines' },
-      { v: 'CN · US', l: 'direct suppliers' },
+      { v: 'Global', l: 'suppliers worldwide' },
       { v: 'PR', l: 'delivery in Puerto Rico' },
     ],
     short: ['Construction', 'Doors & windows', 'Modular homes', 'Design & furniture', 'Business & events', 'Machinery', 'Energy', 'Special projects'],
@@ -276,7 +284,7 @@ const en: Dict = {
     trackBtn: 'Request a quote',
     containerAlt: 'Floating K.A.B. Comercio Global container',
     swipe: 'Swipe',
-    chip: ['China · USA', '→ San Juan, PR'],
+    chip: ['Worldwide reach', '→ San Juan, PR'],
     chip2: ['Personalized', 'service'],
   },
   story: {
@@ -372,13 +380,13 @@ const en: Dict = {
   coverage: {
     eyebrow: 'Global reach',
     title: 'Connecting markets with your project', accent: [1],
-    sub: 'We work directly with factories in China and suppliers in the United States, and coordinate shipping to San Juan through the main Caribbean ports.',
+    sub: 'We work with manufacturers and suppliers from markets around the world and coordinate every shipment to San Juan, Puerto Rico.',
     mapAlt: 'Map of supplier routes to San Juan, Puerto Rico',
     dr: 'San Juan, Puerto Rico',
     regions: [
-      { label: 'China', desc: 'Factories in Shenzhen, Foshan and Guangzhou' },
-      { label: 'Caribbean routes', desc: 'Transit via Cartagena, Kingston and Caucedo' },
-      { label: 'United States', desc: 'National suppliers and recognized brands' },
+      { label: 'Worldwide reach', desc: 'Manufacturers and suppliers in many markets' },
+      { label: 'Coordinated logistics', desc: 'Purchase, shipping and tracking in one place' },
+      { label: 'Delivery in Puerto Rico', desc: 'Everything reaches your project in San Juan' },
     ],
   },
   about: {
@@ -393,12 +401,20 @@ const en: Dict = {
     values: 'What defines us',
     valueList: ['Quality', 'Personalized service', 'Long-term relationships', 'Reliable service', 'Competitive products', 'New opportunities', 'Global vision', 'Tailored solutions'],
   },
+  team: {
+    eyebrow: 'Our team',
+    title: 'The people behind every project', accent: [1],
+    sub: 'A close-knit team that supports you from the first conversation to final delivery.',
+    roles: ['CEO', 'Representative'],
+    call: 'Call',
+    photoSoon: 'Photo coming soon',
+  },
   tips: {
     eyebrow: 'Frequently asked questions',
     title: 'questions before starting your project',
     items: [
       { title: 'What kind of products can you source?', desc: 'We work with a wide variety: construction materials, doors and windows, furniture, business and entertainment equipment, machinery and energy solutions. If it is a special need or a custom project, tell us and we will look for the right alternative.' },
-      { title: 'Do you work with international suppliers?', desc: 'Yes. We work directly with factories in China and suppliers in the United States, and manage the search, procurement and shipping of products to Puerto Rico.' },
+      { title: 'Do you work with international suppliers?', desc: 'Yes. We work with manufacturers and suppliers from markets around the world, and manage the search, procurement and shipping of products to Puerto Rico.' },
       { title: 'Do you offer financing?', desc: 'We are open to exploring financing alternatives, payment terms and business agreements. Each proposal is evaluated individually and is subject to availability, evaluation and approval by the corresponding parties or entities.' },
       { title: 'Are the doors and windows certified?', desc: 'We manage certified options. Certifications, features and performance levels are verified for each product according to the model and the project requirements.' },
       { title: 'Can you help with procedures and permits?', desc: 'We can assist you in coordinating the applicable procedures and permits, subject to the requirements and approvals of the corresponding authorities.' },
@@ -447,7 +463,7 @@ const en: Dict = {
     services: 'Solutions',
     serviceLinks: ['Construction', 'Doors & windows', 'Modular homes', 'Design & furniture', 'Business & entertainment', 'Machinery', 'Energy'],
     company: 'Company',
-    companyLinks: ['About us', 'How we work', 'Special projects', 'Get a quote'],
+    companyLinks: ['About us', 'Our team', 'How we work', 'Special projects', 'Get a quote'],
     top: 'Back to top ↑',
     fab: 'Message us on WhatsApp',
   },

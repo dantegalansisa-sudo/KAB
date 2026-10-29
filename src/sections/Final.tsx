@@ -3,10 +3,10 @@ import { useRef } from 'react';
 import RevealText from '../components/RevealText';
 import MagneticButton from '../components/MagneticButton';
 import Icon from '../components/Icon';
-import { CONTACT, HAS_WHATSAPP, ctaLink, wa } from '../data';
+import { CONTACT, HAS_WHATSAPP, TEAM, ctaLink, fmtPhone, telHref, wa } from '../data';
 import { useLang } from '../i18n';
 
-const COMPANY_HREFS = ['#nosotros', '#proceso', '#proyectos', '#cotizar'];
+const COMPANY_HREFS = ['#nosotros', '#equipo', '#proceso', '#proyectos', '#cotizar'];
 
 export default function Final() {
   const { t } = useLang();
@@ -44,12 +44,15 @@ export default function Final() {
           <strong>K.A.B. Comercio Global Inc.</strong>
           {CONTACT.name && <span>{CONTACT.name}</span>}
           {HAS_WHATSAPP && <a {...ctaLink(t.wa.default)}><Icon name="whatsapp" size={18} /> {CONTACT.phone}</a>}
+          {TEAM.map((m) => (
+            <a key={m.name} href={telHref(m.phone)}><Icon name="phone" size={18} /> {fmtPhone(m.phone)} · {m.name}</a>
+          ))}
           {CONTACT.email && <a href={`mailto:${CONTACT.email}`}><Icon name="mail" size={18} /> {CONTACT.email}</a>}
           {CONTACT.instagram && (
             <a href={CONTACT.instagram} target="_blank" rel="noreferrer"><Icon name="instagram" size={18} /> @{igHandle}</a>
           )}
           <span className="footer__loc"><Icon name="pin" size={18} /> {f.location}</span>
-          {!HAS_WHATSAPP && !CONTACT.email && (
+          {!HAS_WHATSAPP && !CONTACT.email && !TEAM.length && (
             <a href="#contacto"><Icon name="chat" size={18} /> {t.header.links[5]}</a>
           )}
         </div>

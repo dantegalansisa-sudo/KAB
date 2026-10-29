@@ -42,3 +42,16 @@ export const LINES: { id: string; icon: IconName; tone: string }[] = [
   { id: 'energia', icon: 'sun', tone: 'tone-7' },
   { id: 'especiales', icon: 'pencil', tone: 'tone-8' },
 ];
+
+/**
+ * Equipo de trabajo (confirmado por el cliente). `role` es la posición en `t.team.roles`.
+ * PENDIENTE: fotos del equipo → optimizar a webp en `public/img/` y poner la ruta en `photo`.
+ */
+export const TEAM: { name: string; role: number; phone: string; photo: string }[] = [
+  { name: 'Alex Baez', role: 0, phone: '7873074676', photo: '' },
+  { name: 'Patricio Gonzalez', role: 1, phone: '9398819238', photo: '' },
+];
+
+/** 7873074676 → (787) 307-4676 */
+export const fmtPhone = (d: string) => `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`;
+export const telHref = (d: string) => `tel:+1${d}`;

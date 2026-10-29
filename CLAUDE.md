@@ -4,12 +4,14 @@ Contexto para cualquier sesión de Claude Code abierta en esta carpeta. Léelo a
 
 ## Quién es el cliente
 
-- **K.A.B. Comercio Global Inc.**, San Juan, Puerto Rico. Importa, comercializa y distribuye productos y equipos; es intermediario entre sus clientes y proveedores nacionales (EE. UU.) e internacionales.
+- **K.A.B. Comercio Global Inc.**, San Juan, Puerto Rico. Importa, comercializa y distribuye productos y equipos; es intermediario entre sus clientes y proveedores nacionales e internacionales.
 - Lema: *"Conectamos mercados, impulsamos negocios."* / *"Su socio estratégico para construir, equipar y transformar sus proyectos."*
 - 8 líneas de soluciones: construcción y acabados · puertas y ventanas (certificadas, acústicas, de seguridad) · casas modulares · diseño, muebles y lujo · negocios, discotecas y entretenimiento · maquinaria y tecnología · energía (solar, baterías, generadores, A/C) · proyectos especiales (coordinación con diseñadores, trámites y permisos).
 - Financiamiento: siempre con la nota *"sujeto a disponibilidad, evaluación y aprobación de las partes o entidades correspondientes"*. Certificaciones: *"se verifican por producto según modelo y requisitos del proyecto"*. No prometer más que eso.
-- Datos reales (de registros de aduana públicos) que **sí** se usan: San Juan PR 00915; productos que importan (barandas de cristal, escaleras flotantes, sistemas solares con baterías de litio, refrigeración comercial, máquinas de hielo, yeso, mármol, gabinetes, LED); proveedores en China (Shenzhen, Foshan, Guangzhou) con tránsito por Cartagena, Kingston y Caucedo.
-- **No publicar**: nombres de sus proveedores, cantidad de envíos, la dirección exacta ("1972 Avenidaa", parece incompleta) ni el nombre del representante (posiblemente Alex Baez) hasta que el cliente lo confirme.
+- Datos reales que **sí** se usan: San Juan PR 00915; productos que importan (barandas de cristal, escaleras flotantes, sistemas solares con baterías de litio, refrigeración comercial, máquinas de hielo, yeso, mármol, gabinetes, LED).
+- **Orígenes — regla del cliente**: el alcance se presenta como **mundial**. **Nada de China, Europa ni Estados Unidos** (ni ciudades, puertos o rutas concretas) en textos, mapa ni SEO. El mapa de `Coverage` muestra rutas desde todo el mundo sin nombrar países.
+- **Equipo (confirmado por el cliente)**: Alex Baez — CEO — (787) 307-4676; Patricio Gonzalez — Representante — (939) 881-9238. Viven en `TEAM` de `src/data.ts` y salen en la sección Equipo, en Contacto y en el footer.
+- **No publicar**: nombres de sus proveedores, cantidad de envíos ni la dirección exacta ("1972 Avenidaa", parece incompleta) hasta que el cliente la confirme.
 
 ## Relación con ITP Cargo — regla estricta
 
@@ -48,10 +50,11 @@ React 18 + TypeScript + Vite 5 + Framer Motion 11 + CSS plano (sin Tailwind).
 5. **Process** (`#proceso`) — 5 pasos con línea de tiempo y mini contenedor.
 6. **Imports** (`#puertas`) — Puertas y ventanas: la tarjeta se abre como **ventana doble** con el scroll; productos entran girando sobre su bisagra.
 7. **Tools** (`#cotizar`) — cotizador (línea, tipo de proyecto, financiamiento). Sin WhatsApp pasa los datos al formulario.
-8. **Coverage** (`#cobertura`) — mapa: China, rutas del Caribe, EE. UU. → San Juan.
+8. **Coverage** (`#cobertura`) — mapa de alcance mundial: rutas desde todo el mundo → San Juan (sin nombrar países).
 9. **About** (`#nosotros`) + preguntas frecuentes.
-10. **Contact** (`#contacto`) — formulario con validación; envía por WhatsApp, si no por correo, si no queda en "vista demo".
-11. **Final** — CTA + footer.
+10. **Team** (`#equipo`) — equipo de trabajo: tarjetas con foto (por ahora iniciales sobre degradado y "Foto próximamente"), cargo, nombre y teléfono.
+11. **Contact** (`#contacto`) — formulario con validación; envía por WhatsApp, si no por correo, si no queda en "vista demo".
+12. **Final** — CTA + footer.
 
 En móvil (`< 760px`) hay además **barra de navegación inferior** (`MobileTabBar`, la pestaña "Más" abre el menú del Header con el evento `kab:menu`) y `ScrollSheet` envuelve varias secciones (animación de hoja al entrar). No envolver con `ScrollSheet` secciones con `position: sticky` (Services, Operation) ni Imports.
 
@@ -68,7 +71,8 @@ En móvil (`< 760px`) hay además **barra de navegación inferior** (`MobileTabB
 
 - Logo oficial.
 - WhatsApp, correo e Instagram → `src/data.ts` (`CONTACT`).
-- Confirmar dirección y nombre de contacto.
+- Fotos del equipo → webp en `public/img/` y ruta en `photo` de `TEAM` (`src/data.ts`).
+- Confirmar dirección exacta. Confirmar si alguno de los teléfonos del equipo es el WhatsApp de la empresa (`CONTACT.whatsapp`).
 - SEO con el dominio: `SITE_URL` en `i18n.tsx`, canonical + hreflang en `index.html`, `sitemap.xml`, `Sitemap:` en `robots.txt`, alta en Google Search Console (como se hizo en ITP Cargo).
 
 ## Notas técnicas aprendidas (Windows)
