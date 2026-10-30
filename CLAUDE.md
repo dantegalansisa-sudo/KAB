@@ -46,6 +46,7 @@ React 18 + TypeScript + Vite 5 + Framer Motion 11 + CSS plano (sin Tailwind).
 1. **Hero** — PC: `Hero.tsx` (contenedor flotante arrastrable 360°). Móvil: `HeroMobile.tsx` (portada tipo app: buscador, tarjeta oscura con el contenedor, 3 datos y accesos por línea que abren `LineSheet`).
 2. **Story** — "Quiénes somos" (foto `kab-quienes-somos.webp`, estadísticas, cinta de productos).
 3. **Services** (`#soluciones`) — índice editorial **fijo durante el scroll** (PC y móvil): las 8 líneas avanzan con el scroll, panel con número grande, ícono que se dibuja y color por línea. En móvil: nombre activo + 8 segmentos.
+3b. **Showroom** (`#showroom`, `Showroom.tsx` + `src/showroom.ts`) — catálogo por espacios: grupos Hogar / Construcción / Entretenimiento → 9 áreas (sala, comedor, dormitorio, oficina, recibidor y bar, casas modulares, acabados interiores, iluminación y efectos, audio y eventos). Portada grande por área (en PC, mosaico de 4 si las fotos de origen son pequeñas), cuadrícula corta con "Ver más", buscador sin acentos (ES/EN) y visor a pantalla completa (flechas, teclado, deslizar). "Me interesa este estilo" pasa la foto al formulario (o a WhatsApp cuando exista).
 4. **Operation** (`#proyectos`) — "Proyectos especiales": tarjetas apiladas con scroll fijo, fotos `kab-proyecto-1..3.webp`, botones de pasos grandes.
 5. **Process** (`#proceso`) — 5 pasos con línea de tiempo y mini contenedor.
 6. **Imports** (`#puertas`) — Puertas y ventanas: la tarjeta se abre como **ventana doble** con el scroll; productos entran girando sobre su bisagra.
@@ -65,12 +66,19 @@ En móvil (`< 760px`) hay además **barra de navegación inferior** (`MobileTabB
 - Sin fondos punteados/patrones de puntos (el usuario los rechazó). Cursor normal del sistema (sin cursor animado).
 - Estilo: elegante, mucha animación al hacer scroll, nada "plano o estático", poca información por pantalla. **Móvil debe sentirse como una app**, distinto a PC.
 - **Contenedor oficial**: `public/img/container-kab.webp` (diseño real del cliente, naranja `#fc6501` + negro). No alterar sus colores.
-- **Logo**: el cliente **aún no tiene logo**. `logo.png` / `logo-light.png` / favicon son provisionales (monograma "K"). **No inventar ni sustituir el logo** salvo que el usuario entregue el oficial.
+- **Logo oficial** (entregado por el cliente: globo azul marino + órbitas doradas, "KAB COMERCIO GLOBAL INC."): `logo-kab.png` (fondos claros), `logo-kab-light.png` (fondos oscuros: azul → crema, dorado igual), `favicon-kab.png` y `apple-touch-icon-kab.png` (solo el globo). Original: `data de servicios/WhatsApp Image 2026-10-29 at 6.53.46 PM.jpeg`. No alterar sus colores.
+
+## Catálogos del cliente (Showroom)
+
+- Fuente: carpeta `KAB/data de servicios/` (PDF pesados, **fuera de Git** por `.gitignore`): Living room, Dining room, Bedroom, Office, Public space (muebles), catálogo de casas modulares, iluminación de escenario y audio profesional. Las páginas son **imágenes**, sin texto extraíble.
+- Las fotos se recortaron con PyMuPDF + OpenCV (foto principal de cada página; portadas recortadas a mano para quitar textos y logo del fabricante) y se guardaron en `public/img/cat/<area>-NN.webp` (grande, máx. 1600 px) y `-s.webp` (miniatura 720 px). Medidas en `AREAS[].sizes` de `src/showroom.ts`; títulos ES/EN en `t.showroom.areas` (mismo orden).
+- **Regla**: nada que delate el origen. Se descartaron fotos con letras chinas, interiores de estilo chino, marcas de agua y logos de fabricantes (muebles, audio, iluminación). Al añadir fotos nuevas, revisarlas una por una.
+- Pendiente del cliente: faltan más carpetas/catálogos (p. ej. piscinas, frentes de casa); se añaden como nuevas áreas en `AREAS` + textos en i18n.
 
 ## Pendiente
 
-- Logo oficial.
 - WhatsApp, correo e Instagram → `src/data.ts` (`CONTACT`).
+- Más catálogos del cliente → nuevas áreas del Showroom.
 - Fotos del equipo → webp en `public/img/` y ruta en `photo` de `TEAM` (`src/data.ts`).
 - Confirmar dirección exacta. Confirmar si alguno de los teléfonos del equipo es el WhatsApp de la empresa (`CONTACT.whatsapp`).
 - SEO con el dominio: `SITE_URL` en `i18n.tsx`, canonical + hreflang en `index.html`, `sitemap.xml`, `Sitemap:` en `robots.txt`, alta en Google Search Console (como se hizo en ITP Cargo).

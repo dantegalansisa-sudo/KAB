@@ -14,7 +14,7 @@ const es = {
     product: (s: string) => `Hola K.A.B. Comercio Global, me interesa cotizar: ${s.toLowerCase()}.`,
   },
   app: {
-    tabs: ['Inicio', 'Soluciones', 'Proyectos', 'Cotizar', 'Más'],
+    tabs: ['Inicio', 'Soluciones', 'Showroom', 'Cotizar', 'Más'],
     hello: 'Bienvenido a K.A.B.',
     categories: 'Explorar por línea',
     seeAll: 'Ver todo',
@@ -35,7 +35,7 @@ const es = {
     quote: 'Cotizar',
     open: 'Abrir menú',
     close: 'Cerrar menú',
-    links: ['Soluciones', 'Proyectos', 'Cómo trabajamos', 'Cotizar', 'Nosotros', 'Contacto'],
+    links: ['Soluciones', 'Showroom', 'Proyectos', 'Cotizar', 'Nosotros', 'Contacto'],
   },
   hero: {
     pill: 'San Juan, Puerto Rico · Comercio global',
@@ -90,6 +90,63 @@ const es = {
       { title: 'Energía e instalaciones', kicker: 'Solar · Climatización', desc: 'Sistemas solares, baterías, generadores, equipos eléctricos y aire acondicionado de acuerdo con cada proyecto.', tags: ['Solar', 'Baterías de litio', 'Generadores', 'Aire acondicionado'] },
       { title: 'Proyectos especiales', kicker: 'Diseño · Coordinación', desc: 'Coordinamos cada etapa y le conectamos con diseñadores y especialistas nacionales e internacionales para hogares, villas, hoteles y espacios comerciales.', tags: ['Diseño a medida', 'Especialistas', 'Coordinación'] },
     ],
+  },
+  showroom: {
+    eyebrow: 'Showroom',
+    title: 'Inspírese por espacio', accent: [2],
+    sub: 'Ambientes, mobiliario y equipos que conseguimos para su proyecto. Elija un área y encuentre el estilo que va con usted.',
+    search: 'Buscar: sofá, comedor, láser, villa…',
+    searchLabel: 'Buscar en el showroom',
+    clear: 'Borrar búsqueda',
+    groups: ['Hogar', 'Construcción', 'Entretenimiento'],
+    photos: 'fotos',
+    more: 'Ver más',
+    less: 'Ver menos',
+    results: (n: number) => (n === 1 ? '1 resultado' : `${n} resultados`),
+    empty: 'No encontramos coincidencias. Pruebe con otra palabra o díganos qué busca y lo conseguimos.',
+    quoteArea: 'Cotizar este espacio',
+    interest: 'Me interesa este estilo',
+    close: 'Cerrar',
+    prev: 'Foto anterior',
+    next: 'Foto siguiente',
+    note: 'Imágenes de referencia. Modelos, medidas, materiales y acabados se confirman en cada cotización.',
+    msg: (area: string, label: string) => `Me interesa este estilo del showroom: ${area} — ${label}. Quisiera recibir opciones y precio.`,
+    areas: {
+      sala: { name: 'Sala', desc: 'Sofás, butacas, mesas y alfombras para salas que invitan a quedarse.', items: [
+        'Sala en bouclé con mesa de mármol', 'Sofá modular en terracota', 'Sofá curvo con piezas escultóricas', 'Sala clásica en crema y dorado',
+        'Seccional neutro de gran formato', 'Butacas redondas junto a la chimenea', 'Sofá semicircular con mesas doradas', 'Seccional en terciopelo verde',
+        'Sofá curvo con mesas de mármol', 'Sofá orgánico en blanco', 'Sala amplia con alfombra de autor', 'Sala en rosa empolvado', 'Seccional crema con mesa redonda'] },
+      comedor: { name: 'Comedor', desc: 'Mesas, sillas y aparadores para reunir a los suyos con estilo.', items: [
+        'Mesa ovalada en travertino', 'Mesa ovalada con sillas verde azulado', 'Comedor escultórico en madera oscura', 'Mesa con base dorada',
+        'Mesa de madera con patas doradas', 'Comedor dorado con sillas tapizadas', 'Comedor en blanco y oro', 'Mesa redonda negra y dorada',
+        'Mesa ovalada en mármol verde', 'Mesa de mármol con base dorada', 'Mesa larga contemporánea', 'Mesa de mármol con sillas crema', 'Mesa ovalada con sillas de terciopelo'] },
+      dormitorio: { name: 'Dormitorio', desc: 'Camas, cabeceros y mesas de noche para descansar como en un hotel.', items: [
+        'Cama en bouclé con banco a juego', 'Cabecero escultórico en negro', 'Suite crema con mural de mariposas', 'Cabecero orgánico en rojo',
+        'Dormitorio en negro y dorado', 'Cama redonda tapizada', 'Cabecero alto con vista a la ciudad', 'Dormitorio juvenil en verde',
+        'Suite con área de descanso', 'Cabecero ondulado en blanco', 'Cabecero acolchado con tocador', 'Dormitorio con tocador iluminado',
+        'Dormitorio bajo techo con tragaluces', 'Cama tapizada con banco crema'] },
+      oficina: { name: 'Oficina', desc: 'Escritorios, sillones y libreros para oficinas que inspiran.', items: [
+        'Escritorio en nogal con butacas', 'Escritorio en mármol negro', 'Despacho con biblioteca', 'Oficina ejecutiva en tonos oscuros',
+        'Oficina minimalista en gris', 'Escritorio escultórico', 'Escritorio ejecutivo curvo', 'Escritorio en mármol con vista urbana',
+        'Escritorio en cuero', 'Escritorio de líneas onduladas', 'Escritorio curvo en blanco', 'Oficina en madera cálida', 'Oficina ejecutiva panorámica'] },
+      recibidor: { name: 'Recibidor y bar', desc: 'Consolas, barras, taburetes y aparadores para recibir con elegancia.', items: [
+        'Lobby con sofá curvo', 'Consola de esferas negras y doradas', 'Consola negra de diseño', 'Recibidor con consola y espejo',
+        'Sillas tapizadas de acento', 'Barra de cocina con taburetes', 'Consola dorada ovalada', 'Isla de cocina con taburetes verdes',
+        'Bar en casa con taburetes amarillos', 'Taburetes de bar tapizados', 'Aparador negro con detalles dorados'] },
+      casas: { name: 'Casas modulares', desc: 'Casas modulares y prefabricadas, desde la estructura hasta los acabados.', items: [
+        'Villa clásica de dos niveles', 'Villa moderna con terrazas', 'Residencia contemporánea', 'Casa moderna con iluminación exterior',
+        'Fachada en blanco y gris', 'Casa clásica en blanco', 'Villa de estilo mediterráneo', 'Residencia de tres niveles',
+        'Casa con balcones de cristal', 'Villa blanca con jardín', 'Casa compacta de tres pisos'] },
+      acabados: { name: 'Acabados interiores', desc: 'Paredes, techos, pisos, baños y puertas para completar cada espacio.', items: [
+        'Pared de TV en mármol', 'Comedor con molduras y luz cálida', 'Baño en mármol con bañera', 'Comedor con columnas y madera',
+        'Puertas interiores y pisos', 'Doble altura con escalera de diseño'] },
+      iluminacion: { name: 'Iluminación y efectos', desc: 'Cabezas móviles, láseres, techos y pistas LED para negocios y eventos.', items: [
+        'Escenario con iluminación integral', 'Láseres y cabezas móviles', 'Haz de luz de alta precisión', 'Láser de colores para eventos',
+        'Techo LED para discotecas', 'Pista con efecto infinito', 'Luz blinder cálida y fría', 'Cabeza móvil wash LED'] },
+      audio: { name: 'Audio y eventos', desc: 'Sonido profesional, pantallas y ambientación para discotecas, salones y eventos.', items: [
+        'Concierto con sonido y luces profesionales', 'Lounge con pantallas y luz neón', 'Salón VIP en tonos aqua', 'Sala privada para eventos',
+        'Show en vivo en gran formato', 'Festival con escenario completo'] },
+    },
   },
   ops: {
     eyebrow: 'Proyectos especiales',
@@ -248,7 +305,7 @@ const en: Dict = {
     product: (s: string) => `Hello K.A.B. Comercio Global, I'd like a quote for: ${s.toLowerCase()}.`,
   },
   app: {
-    tabs: ['Home', 'Solutions', 'Projects', 'Quote', 'More'],
+    tabs: ['Home', 'Solutions', 'Showroom', 'Quote', 'More'],
     hello: 'Welcome to K.A.B.',
     categories: 'Browse by line',
     seeAll: 'See all',
@@ -269,7 +326,7 @@ const en: Dict = {
     quote: 'Get a quote',
     open: 'Open menu',
     close: 'Close menu',
-    links: ['Solutions', 'Projects', 'How we work', 'Get a quote', 'About us', 'Contact'],
+    links: ['Solutions', 'Showroom', 'Projects', 'Get a quote', 'About us', 'Contact'],
   },
   hero: {
     pill: 'San Juan, Puerto Rico · Global trade',
@@ -324,6 +381,63 @@ const en: Dict = {
       { title: 'Energy & facilities', kicker: 'Solar · HVAC', desc: 'Solar systems, batteries, generators, electrical equipment and air conditioning tailored to each project.', tags: ['Solar', 'Lithium batteries', 'Generators', 'Air conditioning'] },
       { title: 'Special projects', kicker: 'Design · Coordination', desc: 'We coordinate every stage and connect you with national and international designers and specialists for homes, villas, hotels and commercial spaces.', tags: ['Custom design', 'Specialists', 'Coordination'] },
     ],
+  },
+  showroom: {
+    eyebrow: 'Showroom',
+    title: 'Get inspired by space', accent: [3],
+    sub: 'Settings, furniture and equipment we source for your project. Choose an area and find the style that suits you.',
+    search: 'Search: sofa, dining, laser, villa…',
+    searchLabel: 'Search the showroom',
+    clear: 'Clear search',
+    groups: ['Home', 'Construction', 'Entertainment'],
+    photos: 'photos',
+    more: 'See more',
+    less: 'See less',
+    results: (n: number) => (n === 1 ? '1 result' : `${n} results`),
+    empty: 'No matches found. Try another word or tell us what you are looking for and we will source it.',
+    quoteArea: 'Quote this space',
+    interest: 'I like this style',
+    close: 'Close',
+    prev: 'Previous photo',
+    next: 'Next photo',
+    note: 'Reference images. Models, sizes, materials and finishes are confirmed in each quote.',
+    msg: (area: string, label: string) => `I'm interested in this showroom style: ${area} — ${label}. I'd like to receive options and pricing.`,
+    areas: {
+      sala: { name: 'Living room', desc: 'Sofas, armchairs, tables and rugs for living rooms you never want to leave.', items: [
+        'Bouclé living room with marble table', 'Modular sofa in terracotta', 'Curved sofa with sculptural pieces', 'Classic cream and gold living room',
+        'Large neutral sectional', 'Round armchairs by the fireplace', 'Semicircular sofa with gold tables', 'Green velvet sectional',
+        'Curved sofa with marble tables', 'Organic white sofa', 'Spacious living room with designer rug', 'Dusty pink living room', 'Cream sectional with round table'] },
+      comedor: { name: 'Dining room', desc: 'Tables, chairs and sideboards to gather your people in style.', items: [
+        'Oval travertine dining table', 'Oval table with teal chairs', 'Sculptural dark wood dining room', 'Dining table with gold base',
+        'Wood table with gold legs', 'Gold dining set with upholstered chairs', 'White and gold dining room', 'Round black and gold table',
+        'Oval green marble table', 'Marble table with gold base', 'Long contemporary table', 'Marble table with cream chairs', 'Oval table with velvet chairs'] },
+      dormitorio: { name: 'Bedroom', desc: 'Beds, headboards and nightstands for hotel-style rest.', items: [
+        'Bouclé bed with matching bench', 'Sculptural black headboard', 'Cream suite with butterfly wall art', 'Organic red headboard',
+        'Black and gold bedroom', 'Round upholstered bed', 'Tall headboard with city view', 'Green youth bedroom',
+        'Suite with sitting area', 'Wavy white headboard', 'Quilted headboard with vanity', 'Bedroom with lit vanity',
+        'Attic bedroom with skylights', 'Upholstered bed with cream bench'] },
+      oficina: { name: 'Office', desc: 'Desks, chairs and bookcases for offices that inspire.', items: [
+        'Walnut desk with armchairs', 'Black marble desk', 'Study with library', 'Dark-toned executive office',
+        'Minimalist grey office', 'Sculptural desk', 'Curved executive desk', 'Marble desk with city view',
+        'Leather desk', 'Wave-shaped desk', 'Curved white desk', 'Warm wood office', 'Panoramic executive office'] },
+      recibidor: { name: 'Entry & bar', desc: 'Consoles, bars, stools and sideboards to welcome guests with elegance.', items: [
+        'Lobby with curved sofa', 'Black and gold sphere console', 'Designer black console', 'Entryway with console and mirror',
+        'Upholstered accent chairs', 'Kitchen counter with stools', 'Oval gold console', 'Kitchen island with green stools',
+        'Home bar with yellow stools', 'Upholstered bar stools', 'Black sideboard with gold details'] },
+      casas: { name: 'Modular homes', desc: 'Modular and prefabricated homes, from structure to finishes.', items: [
+        'Classic two-story villa', 'Modern villa with terraces', 'Contemporary residence', 'Modern home with exterior lighting',
+        'White and grey façade', 'Classic white home', 'Mediterranean-style villa', 'Three-story residence',
+        'Home with glass balconies', 'White villa with garden', 'Compact three-story home'] },
+      acabados: { name: 'Interior finishes', desc: 'Walls, ceilings, floors, bathrooms and doors to complete every space.', items: [
+        'Marble TV wall', 'Dining room with moldings and warm light', 'Marble bathroom with tub', 'Dining room with columns and wood',
+        'Interior doors and flooring', 'Double-height hall with designer staircase'] },
+      iluminacion: { name: 'Lighting & effects', desc: 'Moving heads, lasers, LED ceilings and dance floors for venues and events.', items: [
+        'Stage with full lighting design', 'Lasers and moving heads', 'High-precision light beam', 'Color laser for events',
+        'LED ceiling for nightclubs', 'Infinity-effect dance floor', 'Warm and cool blinder light', 'LED wash moving head'] },
+      audio: { name: 'Audio & events', desc: 'Pro sound, screens and ambiance for nightclubs, venues and events.', items: [
+        'Concert with pro sound and lights', 'Lounge with screens and neon light', 'Aqua-toned VIP room', 'Private event room',
+        'Large-format live show', 'Festival with full stage'] },
+    },
   },
   ops: {
     eyebrow: 'Special projects',

@@ -12,7 +12,8 @@ Proyecto independiente de ITP Cargo (otra carpeta y otro repositorio).
 | `src/` | Código de la web (React + TypeScript + Vite + Framer Motion) |
 | `src/i18n.tsx` | Todos los textos en español e inglés |
 | `src/data.ts` | Datos de contacto (WhatsApp, correo, Instagram), equipo de trabajo y líneas de soluciones |
-| `public/img/` | Imágenes optimizadas que usa la web |
+| `public/img/` | Imágenes optimizadas que usa la web (`cat/` = fotos del Showroom) |
+| `src/showroom.ts` | Áreas del Showroom (catálogo por espacios) |
 | `marketing/qr/` | QR personalizado (tarjeta, PNG, transparente y SVG) |
 | `_material/recursos-cliente/` | Archivos originales del cliente (no se suben a GitHub) |
 
@@ -28,7 +29,7 @@ npm run build
 
 ## Pendiente del cliente
 
-- Logo oficial (hoy hay uno provisional en `public/img/logo.png`).
+- Más catálogos (se añaden como áreas del Showroom: `src/showroom.ts` + textos en `src/i18n.tsx`).
 - WhatsApp, correo e Instagram → completar en `src/data.ts`. Sin WhatsApp, los botones de cotizar llevan al formulario.
 - Fotos del equipo de trabajo → `TEAM` en `src/data.ts`.
 - Dirección exacta (a confirmar).

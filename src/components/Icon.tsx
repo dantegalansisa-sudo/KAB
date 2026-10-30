@@ -44,6 +44,11 @@ const P: Record<IconName, JSX.Element> = {
   door: <><rect x="5" y="2.5" width="14" height="19" rx="1" /><path d="M8 5.5h8v7H8z" /><path d="M15.5 14.5v1.5" /></>,
   stairs: <><path d="M3 20h5v-4.5h4.5V11H17V6.5h4" /><path d="M3 20h18" /></>,
   railing: <><path d="M3 7h18" /><rect x="4" y="9" width="7.5" height="10" rx="1" /><rect x="12.5" y="9" width="7.5" height="10" rx="1" /><path d="M6 11.5l2 2" /></>,
+  bed: <><path d="M3 18V7" /><path d="M3 14h18v4" /><path d="M21 14v-2.5A2.5 2.5 0 0018.5 9H11v5" /><circle cx="7" cy="11" r="1.8" /></>,
+  dining: <><path d="M3 10h18" /><path d="M6 10v9M18 10v9" /><path d="M8 6.5c0-1.4 1.8-2.5 4-2.5s4 1.1 4 2.5" /><path d="M12 4V2.5" /></>,
+  desk: <><path d="M2.5 9h19" /><path d="M4 9v11M20 9v11" /><path d="M14 9v6h6" /><path d="M8 9V5.5h5V9" /></>,
+  lamp: <><path d="M8 3h8l3 7H5z" /><path d="M12 10v8" /><path d="M8 21h8" /><path d="M10 13.5l-1.5 2.5M14 13.5l1.5 2.5" /></>,
+  music: <><path d="M9 18V5l11-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="17" cy="16" r="3" /></>,
   layers:<><path d="M12 3l9 5-9 5-9-5z" /><path d="M3 13l9 5 9-5" /></>,
 };
 

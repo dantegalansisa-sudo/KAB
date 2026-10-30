@@ -5,7 +5,7 @@ import { CONTACT, HAS_WHATSAPP, ctaLink } from '../data';
 import { useLang, type Lang } from '../i18n';
 import { EASINGS } from '../utils/easings';
 
-const HREFS = ['#soluciones', '#proyectos', '#proceso', '#cotizar', '#nosotros', '#contacto'];
+const HREFS = ['#soluciones', '#showroom', '#proyectos', '#cotizar', '#nosotros', '#contacto'];
 
 export function LangSwitch({ dark }: { dark?: boolean }) {
   const { lang, setLang } = useLang();
@@ -53,7 +53,7 @@ export default function Header() {
         transition={{ duration: 0.45, ease: EASINGS.smooth }}
       >
         <a href="#top" className="header__logo" aria-label={t.header.home}>
-          <img src="/img/logo.png" alt="K.A.B. Comercio Global Inc." />
+          <img src="/img/logo-kab.png" alt="K.A.B. Comercio Global Inc." />
         </a>
         <nav className="header__nav" aria-label="Principal">
           {t.header.links.map((label, i) => (
@@ -79,7 +79,7 @@ export default function Header() {
             transition={{ duration: 0.7, ease: EASINGS.premium }}
           >
             <div className="menu__top">
-              <img src="/img/logo-light.png" alt="K.A.B. Comercio Global Inc." className="menu__logo" />
+              <img src="/img/logo-kab-light.png" alt="K.A.B. Comercio Global Inc." className="menu__logo" />
               <button className="header__menu header__menu--dark" aria-label={t.header.close} onClick={() => setOpen(false)}>
                 <Icon name="close" size={22} stroke={2} />
               </button>

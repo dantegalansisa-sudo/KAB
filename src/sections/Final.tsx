@@ -36,7 +36,7 @@ export default function Final() {
       </section>
 
       <footer className="footer" id="footer">
-        <img src="/img/logo-light.png" alt="K.A.B. Comercio Global Inc." className="footer__logo" loading="lazy" />
+        <img src="/img/logo-kab-light.png" alt="K.A.B. Comercio Global Inc." className="footer__logo" loading="lazy" />
         <p className="footer__tag">{f.tag}</p>
 
         <div className="footer__contact">

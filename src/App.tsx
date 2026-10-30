@@ -8,6 +8,7 @@ import Hero from './sections/Hero';
 import HeroMobile from './sections/HeroMobile';
 import Story from './sections/Story';
 import Services from './sections/Services';
+import Showroom from './sections/Showroom';
 import Operation from './sections/Operation';
 import Process from './sections/Process';
 import Imports from './sections/Imports';
@@ -48,6 +49,7 @@ export default function App() {
         {mobile ? <HeroMobile onSearch={onSearch} onPick={setSheet} /> : <Hero onTrack={onSearch} />}
         <Story />
         <Services />
+        <Showroom onInterest={onContinue} />
         <Operation />
         <ScrollSheet enabled={mobile}><Process /></ScrollSheet>
         <Imports />

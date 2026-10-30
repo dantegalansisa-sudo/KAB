@@ -7,11 +7,11 @@ import { useLang } from '../i18n';
 const TABS: { id: string; icon: IconName }[] = [
   { id: 'top', icon: 'home' },
   { id: 'soluciones', icon: 'layers' },
-  { id: 'proyectos', icon: 'spark' },
+  { id: 'showroom', icon: 'sofa' },
   { id: 'cotizar', icon: 'calc' },
   { id: 'more', icon: 'menu' },
 ];
-const SPY = ['top', 'soluciones', 'proyectos', 'cotizar'];
+const SPY = ['top', 'soluciones', 'showroom', 'cotizar'];
 
 /** Barra de navegación inferior (solo móvil); resalta la sección visible */
 export default function MobileTabBar() {
